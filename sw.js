@@ -1,5 +1,5 @@
 /*
-    Ma Liste DEMO — service worker : permet d'ouvrir l'appli sans réseau (dans le magasin)
+    Maliste DEMO — service worker : permet d'ouvrir l'appli sans réseau (dans le magasin)
     Copyright (C) 2026 Jluc — JLApplis — Licence GPL v3 (voir LICENSE.txt)
 
     - Pages de l'appli : réseau d'abord (pour avoir la dernière version), copie gardée en secours.
@@ -7,7 +7,7 @@
     - Polices : copie gardée et réutilisée.
     - Les listes elles-mêmes sont dans le navigateur (localStorage), pas dans ce cache.
 */
-const CACHE = "ma-liste-demo-v1";
+const CACHE = "maliste-demo-v1";
 const BASE = ["./", "index.html", "fiche-formation.html", "manifest.webmanifest", "icon-192.png", "icon-512.png"];
 
 self.addEventListener("install", (e) => {
@@ -20,7 +20,7 @@ self.addEventListener("install", (e) => {
 
 self.addEventListener("activate", (e) => {
   e.waitUntil((async () => {
-    for (const k of await caches.keys()) if (k !== CACHE) await caches.delete(k);
+    for (const k of await caches.keys()) if (k !== CACHE && /^(ma-liste-demo|maliste-demo)-v\d+$/.test(k)) await caches.delete(k);   // seulement ses propres caches (les autres applis du site gardent les leurs)
     await self.clients.claim();
   })());
 });

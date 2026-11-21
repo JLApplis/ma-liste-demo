@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Ma Liste DEMO</title>
+<title>Maliste DEMO</title>
 <meta name="theme-color" content="#2E7D4F">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon-192.png">
@@ -196,7 +196,7 @@ a.tiroir-item { text-decoration: none; }
 <form class="connexion" id="ecran-connexion" hidden autocomplete="on">
   <div class="haut">
     <div class="fruits" aria-hidden="true">🥕🍅🥖🍋🧀</div>
-    <h1>Courses</h1>
+    <h1>Maliste</h1>
     <div class="sous">La liste de courses, sans compte</div>
   </div>
   <div class="corps">
@@ -211,7 +211,7 @@ a.tiroir-item { text-decoration: none; }
 <div id="app" hidden>
 <div id="voile" hidden></div>
 <nav id="tiroir" aria-label="Menu" hidden>
-  <div class="tiroir-tete"><span class="tiroir-titre">Courses</span><button class="fermer-tiroir" id="fermer-tiroir" type="button" aria-label="Fermer le menu">×</button></div>
+  <div class="tiroir-tete"><span class="tiroir-titre">Maliste DEMO</span><button class="fermer-tiroir" id="fermer-tiroir" type="button" aria-label="Fermer le menu">×</button></div>
   <div class="tiroir-label">Listes</div>
   <div id="tiroir-listes"></div>
   <button class="tiroir-item ajout-item" id="nouvelle-liste" type="button"><span class="ic">＋</span>Nouvelle liste</button>
@@ -222,20 +222,20 @@ a.tiroir-item { text-decoration: none; }
   <button class="tiroir-item" id="aller-archives" type="button"><span class="ic">🗄️</span>Archives<span class="compte" id="nb-archives"></span></button>
   <button class="tiroir-item" id="aller-sauvegarde" type="button"><span class="ic">💾</span>Sauvegarde</button>
   <a class="tiroir-item" id="aller-aide" href="fiche-formation.html" target="_blank" rel="noopener"><span class="ic">❓</span>Aide</a>
-  <div class="tiroir-pied">Ma Liste DEMO <span id="version"></span> — JLApplis<br><small>tirée de Courses 1.18, licence GPL v3</small><br><button class="deco" id="deco" type="button" hidden>Se déconnecter</button>
+  <div class="tiroir-pied">Maliste DEMO <span id="version"></span> — JLApplis<br><small>tirée de Maliste 1.19, licence GPL v3</small><br><button class="deco" id="deco" type="button" hidden>Se déconnecter</button>
     <div class="deco-confirme" id="deco-confirme" hidden><span>Se déconnecter ?</span><span class="deco-btns"><button class="non" id="deco-non" type="button">Annuler</button><button class="oui" id="deco-oui" type="button">Se déconnecter</button></span></div></div>
 </nav>
 
 <div class="page">
   <header>
     <button class="btn-menu" id="btn-menu" type="button" aria-label="Ouvrir le menu">☰</button>
-    <h1 id="titre-vue">Courses</h1>
+    <h1 id="titre-vue">Maliste</h1>
     <span class="etat" id="etat">Chargement…</span>
     <button class="btn-menu btn-sauv" id="btn-sauv" type="button" title="Sauvegarder" aria-label="Sauvegarder">💾<span class="pastille" id="pastille-sauv" hidden></span></button>
     <button class="btn-menu" id="btn-actions" type="button" aria-label="Renommer ou archiver" hidden>⋮</button>
   </header>
   <div class="exemples" id="exemples" hidden>
-    👋 Ma Liste DEMO contient des <b>exemples</b> pour la découvrir : cocher un article, taper « ba » dans le champ du bas, glisser un magasin avec ⠿, ouvrir le menu ☰ (autre liste, notes, archives)… Ensuite, effacer les exemples pour commencer sa propre liste.
+    👋 Maliste DEMO contient des <b>exemples</b> pour la découvrir : cocher un article, taper « ba » dans le champ du bas, glisser un magasin avec ⠿, ouvrir le menu ☰ (autre liste, notes, archives)… Ensuite, effacer les exemples pour commencer sa propre liste.
     <div class="btns"><button class="pop-ok" id="ex-effacer" type="button">🧹 Effacer les exemples</button><a href="fiche-formation.html" target="_blank" rel="noopener">❓ Aide</a></div>
     <div class="confirme" id="ex-confirme" hidden><span>Supprimer tous les exemples (listes, articles, notes) ? Ce qui a été ajouté à la « Liste de courses » est conservé.</span><button class="non" id="ex-non" type="button">Annuler</button><button class="oui" id="ex-oui" type="button">Effacer</button></div>
   </div>
@@ -300,13 +300,13 @@ a.tiroir-item { text-decoration: none; }
       <p class="note" id="fs-aide"></p>
     </div>
     <div class="bloc-s"><h3>↩️ Restaurer</h3>
-      <p class="note">Remplace <b>toutes</b> les données actuelles par celles d'un fichier de sauvegarde Ma Liste. Juste avant, l'état actuel est sauvegardé automatiquement (fichier « MA-LISTE_avant_restauration_… »). </p>
+      <p class="note">Remplace <b>toutes</b> les données actuelles par celles d'un fichier de sauvegarde Maliste DEMO. Juste avant, l'état actuel est sauvegardé automatiquement (fichier « MALISTE-DEMO_avant_restauration_… »). </p>
       <div class="btns"><button class="lien" id="rest-choisir" type="button">📂 Choisir une sauvegarde…</button></div>
       <div class="confirme" id="rest-confirme" hidden><span id="rest-txt"></span><button class="non" id="rest-non" type="button">Annuler</button><button class="oui" id="rest-oui" type="button">Tout remplacer</button></div>
       <input type="file" id="file-json" accept=".json,application/json" hidden>
     </div>
     <div class="bloc-s"><h3>🧪 Exemples</h3>
-      <p class="note">Des exemples (magasins, éléments cochés, liste Bricolage, notes, archives) pour découvrir ou présenter Ma Liste DEMO. Les remettre ne modifie pas les listes existantes ; les effacer ne retire que les exemples.</p>
+      <p class="note">Des exemples (magasins, éléments cochés, liste Bricolage, notes, archives) pour découvrir ou présenter Maliste DEMO. Les remettre ne modifie pas les listes existantes ; les effacer ne retire que les exemples.</p>
       <div class="btns"><button class="pop-ok" id="ex-remettre" type="button">🧪 Remettre les exemples</button><button class="lien rouge" id="ex-effacer2" type="button">🧹 Effacer les exemples</button></div>
     </div>
     <div class="sauv-msg" id="sauv-msg" role="status"></div>
@@ -322,7 +322,7 @@ a.tiroir-item { text-decoration: none; }
 <div class="toast" id="toast" role="status" hidden></div>
 <script type="module">
 /*
-    Ma Liste DEMO 1.3 — liste de courses sans compte (JLApplis), tirée de Courses 1.18
+    Maliste DEMO 1.4 — liste de courses sans compte (JLApplis), tirée de Maliste 1.19
     Les données restent dans le navigateur de l'appareil (localStorage) : pas de compte, pas de Firebase, rien n'est envoyé.
     Fichiers à côté : manifest.webmanifest, sw.js, icon-192.png, icon-512.png, fiche-formation.html
     Copyright (C) 2026 Jluc — JLApplis — Licence GPL v3 (voir LICENSE)
@@ -495,7 +495,7 @@ const { initializeApp, getAuth, onAuthStateChanged, signInWithEmailAndPassword, 
   };
 })();
 
-const VERSION = "1.3";   // version de Ma Liste (tirée de Courses 1.18)
+const VERSION = "1.4";   // version de Maliste DEMO (tirée de Maliste 1.19)
 
 /* chaque écriture compte comme une modification non sauvegardée (sur cet appareil) */
 /* compteur de modifications non sauvegardées, PARTAGÉ entre appareils (Firestore : users/{uid}/meta/sauvegarde) :
@@ -857,7 +857,7 @@ function suggerer() {
   if (ti && l) boutonsSugg(l.firstChild, ti.value, (t) => { ti.value = t; validerInsertion(false); });
 }
 
-/* ---------- Ma Liste : exemples de la première ouverture ---------- */
+/* ---------- Maliste DEMO : exemples de la première ouverture ---------- */
 function majExemples() {
   const a = aDesExemples(), e = $("exemples"); if (e) e.hidden = !a;
   $("ex-remettre").disabled = a; $("ex-effacer2").disabled = !a;
@@ -1125,7 +1125,7 @@ async function lireTout() {
     }
     groupes.push(o);
   }
-  return { application: "MA LISTE", format: 1, version: VERSION, exporteLe: new Date().toISOString(), groupes };
+  return { application: "MALISTE DEMO", format: 1, version: VERSION, exporteLe: new Date().toISOString(), groupes };
 }
 function compter(o) {
   const l = o.groupes.filter((g) => g.data.type !== "note"), n = o.groupes.filter((g) => g.data.type === "note");
@@ -1149,14 +1149,14 @@ function rendreSauvegarde() {
   const m = nbModifs();
   $("sauv-derniere").textContent = (d ? new Date(d).toLocaleString("fr-FR") : "jamais") + (m ? " — " + pl(m, "modification") + " depuis" : "");
   $("fs-choisir").hidden = !fsDispo();
-  $("fs-aide").textContent = fsDispo() ? "Choisir une fois le dossier (par exemple un dossier « Ma Liste » dans Documents) : chaque sauvegarde y sera enregistrée directement. Le navigateur peut redemander l'autorisation : l'accepter." : "Ce navigateur ne permet pas de choisir un dossier : la sauvegarde va dans « Téléchargements ».";
+  $("fs-aide").textContent = fsDispo() ? "Choisir une fois le dossier (par exemple un dossier « Maliste » dans Documents) : chaque sauvegarde y sera enregistrée directement. Le navigateur peut redemander l'autorisation : l'accepter." : "Ce navigateur ne permet pas de choisir un dossier : la sauvegarde va dans « Téléchargements ».";
   fsGet().then((h) => { $("fs-nom").textContent = h ? "« " + h.name + " »" : "aucun (le fichier va dans « Téléchargements »)"; $("fs-oublier").hidden = !h; });
 }
 let SAUV_EN_COURS = false;
 async function sauvegarderMaintenant(afficher) {
   if (SAUV_EN_COURS) return; SAUV_EN_COURS = true; $("sauv-go").disabled = true; $("btn-sauv").disabled = true;
   afficher("Sauvegarde en cours…");
-  try { const dos = await preparerDossier(), r = await sauvegarder(dos, "MA-LISTE_sauvegarde_"); afficher("Sauvegarde enregistrée : " + r.nom + " → " + r.ou + ". " + compter(r.obj) + "."); }
+  try { const dos = await preparerDossier(), r = await sauvegarder(dos, "MALISTE-DEMO_sauvegarde_"); afficher("Sauvegarde enregistrée : " + r.nom + " → " + r.ou + ". " + compter(r.obj) + "."); }
   catch (e) { afficher("Sauvegarde impossible : " + e.message + ".", true); }
   SAUV_EN_COURS = false; $("sauv-go").disabled = false; $("btn-sauv").disabled = false;
   if (VUE && VUE.type === "sauvegarde") rendreSauvegarde();
@@ -1188,7 +1188,7 @@ $("fs-oublier").addEventListener("click", () => { fsSet(null).then(() => { msgSa
 const idOk = (x) => typeof x === "string" && x.length > 0 && x.length <= 700 && !x.includes("/") && x !== "." && x !== ".." && !/^__.*__$/.test(x);
 const objet = (x) => !!x && typeof x === "object" && !Array.isArray(x);
 function validerSauvegarde(o) {
-  if (!objet(o) || !["MA LISTE", "COURSES DEMO"].includes(o.application) || !Array.isArray(o.groupes)) throw new Error("ce fichier n'est pas une sauvegarde Ma Liste");
+  if (!objet(o) || !["MALISTE DEMO", "MA LISTE", "COURSES DEMO"].includes(o.application) || !Array.isArray(o.groupes)) throw new Error("ce fichier n'est pas une sauvegarde Maliste DEMO");
   const vus = new Set();
   o.groupes.forEach((g) => {
     if (!objet(g) || !idOk(g.id) || !objet(g.data) || vus.has(g.id)) throw new Error("liste ou note mal formée dans le fichier");
@@ -1228,7 +1228,7 @@ $("rest-oui").addEventListener("click", async () => {
   const btn = $("rest-choisir"); btn.disabled = true;
   try {
     msgSauv("Sauvegarde de l'état actuel…");
-    const avant = await sauvegarder(await preparerDossier(), "MA-LISTE_avant_restauration_");
+    const avant = await sauvegarder(await preparerDossier(), "MALISTE-DEMO_avant_restauration_");
     msgSauv("Restauration en cours…");
     const nouv = ecritures(o), garder = new Set(nouv.map(([r]) => r.path));
     const ops = ecritures(avant.obj).filter(([r]) => !garder.has(r.path)).map(([r]) => [r, null]).concat(nouv);
@@ -1240,7 +1240,7 @@ $("rest-oui").addEventListener("click", async () => {
     remettreAZero();   // les données sont maintenant celles du fichier
     msgSauv("Sauvegarde restaurée : " + compter(o) + ". L'état d'avant est dans " + avant.nom + " (" + avant.ou + ").");
     rendreSauvegarde(); rendreTiroir();
-  } catch (e) { msgSauv("Restauration interrompue : " + e.message + ". Si une partie a été remplacée, restaurer le fichier « MA-LISTE_avant_restauration_… ».", true); }
+  } catch (e) { msgSauv("Restauration interrompue : " + e.message + ". Si une partie a été remplacée, restaurer le fichier « MALISTE-DEMO_avant_restauration_… ».", true); }
   btn.disabled = false;
 });
 

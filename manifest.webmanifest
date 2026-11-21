@@ -1,6 +1,6 @@
 {
-  "name": "Ma Liste DEMO",
-  "short_name": "Ma Liste",
+  "name": "Maliste DEMO",
+  "short_name": "Maliste",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
